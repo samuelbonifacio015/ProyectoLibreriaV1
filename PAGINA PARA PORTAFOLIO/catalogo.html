@@ -1,159 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
-		<title>JSR - Catalogo</title>
-		<link rel="stylesheet" href="css/catalogo.css" />
-        <link rel="stylesheet" href="css/sobre-nosotros.css">
-        <link rel="stylesheet" href="css/styles.css">
-	</head>
-	<body>
-        <header class="navbar">
-            <div class="logo">
-                <img src="img/JSR.jpg" alt="JSR Librería">
-                <h1>Librería JSR</h1> 
-            </div>       
-            <div class="menu">            
-                <a href="#"><i class="fa fa-user"></i> <span>Inicia sesión</span></a>
-                <a href="index.html">Inicio</a>
-                <a href="catalogo.html">Catálogo</a>
-                <a href="contacto.html">Contacto</a>
-            </div>
-        </header>
-
-		<header>
-			<h1>Catalogo</h1>
-
-			<div class="container-icon">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke-width="1.5"
-					stroke="currentColor"
-					class="icon-cart"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
-					/>
-				</svg>
-				<div class="count-products">
-					<span id="contador-productos">0</span>
-				</div>
-
-				<div class="container-cart-products hidden-cart">
-					<div class="cart-product">
-						<div class="info-cart-product">
-                            <span class="cantidad-producto-carrito">1</span>
-                            <p class="titulo-producto-carrito">Zapatos Nike</p>
-                            <span class="precio-producto-carrito">$80</span>
-                        </div>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="currentColor"
-							class="icon-close"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="M6 18L18 6M6 6l12 12"
-							/>
-						</svg>
-					</div>
-                    <div class="cart-total">
-                        <h3>Total:</h3>
-                        <span class="total-pagar">$200</span>
-                    </div>
-				</div>
-			</div>
-		</header>
-
-        <div class="menu">
-            <a href="#"><i class="fa fa-shopping-cart"></i></a>
-            <a href="#"><i class="fa fa-user"></i> <span>Inicia sesión</span></a>
-            <a href="sobre-nosotros.html">Sobre Nosotros</a>
-            <a href="catalogo.html">Catálogo</a>
-        </div>  
-
-		<div class="container-items">
-			<div class="item">
-				<figure>
-					<img
-						src="img/cuaderno.jpg"
-						alt="producto"
-					/>
-				</figure>
-				<div class="info-product">
-					<h2>Cuaderno Alpha</h2>
-					<p class="price">S/5.90</p>
-					<button>Añadir al carrito</button>
-				</div>
-			</div>
-			<div class="item">
-				<figure>
-					<img
-						src="img/audifonos.jpg"
-						alt="producto"
-					/>
-				</figure>
-				<div class="info-product">
-					<h2>Audifonos</h2>
-					<p class="price">S/35.90</p>
-					<button>Añadir al carrito</button>
-				</div>
-			</div>
-			<div class="item">
-				<figure>
-					<img
-						src="img/mochila.jpg"
-						alt="producto"
-					/>
-				</figure>
-				<div class="info-product">
-					<h2>Mochila</h2>
-					<p class="price">S/50.90</p>
-					<button>Añadir al carrito</button>
-				</div>
-			</div>
-			<div class="item">
-				<figure>
-					<img
-						src="img/juguete.jpg"
-						alt="producto"
-					/>
-				</figure>
-				<div class="info-product">
-					<h2>Juguete</h2>
-					<p class="price">S/27.90</p>
-					<button>Añadir al carrito</button>
-				</div>
-			</div>
-			<div class="item">
-				<figure>
-					<img
-						src="img/colores.jpg"
-						alt="producto"
-					/>
-				</figure>
-				<div class="info-product">
-					<h2>Caja de Colores</h2>
-					<p class="price">S/13.90</p>
-					<button>Añadir al carrito</button>
-				</div>
-			</div>
-		</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatalogoV2 - JSR</title>
+    <link rel="stylesheet" href="css/catalogo.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
     
+</head>
+<body>
+    <!--Contenedor donde se cargara la navbar-->
+    <div id="navbar-container"></div>
 
-        <script src="js/catalogo.js"></script>
-	</body>
+    <div class="cards">
+        <div class="card">
+            <div class="info-block">
+                <span class="title">Cuaderno</span>
+                <span class="sub-title">Cuaderno Alpha</span>
+            </div>
+            <img src="img/cuaderno.jpg" alt="cuaderno">
+            <div class="card-footer">
+                <span class="price">S/5.00</span>
+                <button class="btn-primary">Comprar</button>
+            </div>
+        </div>
+        <div class="card">          
+            <div class="info-block">
+                <span class="title">Juguete</span>
+                <span class="sub-title">Juguete Spiderman</span>
+            </div>
+            <img src="img/juguete.jpg" alt="juguete">
+            <div class="card-footer">
+                <span class="price">S/12.00</span>
+                <button class="btn-primary">Comprar</button>
+            </div>
+        </div>
+        <div class="card">          
+            <div class="info-block">
+                <span class="title">Mochila</span>
+                <span class="sub-title">Mochila Adidas</span>
+            </div>
+            <img src="img/mochila.jpg" alt="mochila">
+            <div class="card-footer">
+                <span class="price">S/40.00</span>
+                <button class="btn-primary">Comprar</button>
+            </div>
+        </div>
+        <div class="card">          
+            <div class="info-block">
+                <span class="title">Colores</span>
+                <span class="sub-title">Colores Faber</span>
+            </div>
+            <img src="img/colores.jpg" alt="colores">
+            <div class="card-footer">
+                <span class="price">S/20.00</span>
+                <button class="btn-primary">Comprar</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="info-block">
+                <span class="title">Audifonos</span>
+                <span class="sub-title">Audifonos 8D</span>
+            </div>
+            <img src="img/audifonos.jpg" alt="audifonos">
+            <div class="card-footer">
+                <span class="price">S/30.00</span>
+                <button class="btn-primary">Comprar</button>
+            </div>
+        </div>
+    </div>
+   <!-- Script para cargar la navbar -->
+		<script>
+			// Cargar la navbar desde el archivo navbar.html
+			fetch('navbar.html')
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('navbar-container').innerHTML = data;
+				})
+				.catch(error => console.error('Error al cargar la navbar:', error));
+		</script>
+    
+</body>
 </html>

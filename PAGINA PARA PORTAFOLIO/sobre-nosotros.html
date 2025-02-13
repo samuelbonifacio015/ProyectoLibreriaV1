@@ -9,18 +9,8 @@
     <link rel="stylesheet" href="css/sobre-nosotros.css">
 </head>
 <body>
-    <!--NavBar-->
-    <header class="navbar">
-        <div class="logo">
-            <img src="img/JSR.jpg" alt="JSR Librería">
-            <h1>Librería JSR</h1> 
-        </div>
-        <div class="menu">
-            <a href="index.html">Inicio</a>
-            <a href="catalogo.html">Catálogo</a>
-            <a href="contacto.html">Contacto</a>
-        </div>
-    </header>
+    <!--Contenedor donde se cargara la navbar-->
+    <div id="navbar-container"></div>
 
     <section class="sobre-nosotros">
         <h2>Quiénes Somos</h2>
@@ -49,6 +39,17 @@
             </div>
         </div>
     </section>
+
+    <!-- Script para cargar la navbar -->
+		<script>
+			// Cargar la navbar desde el archivo navbar.html
+			fetch('navbar.html')
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('navbar-container').innerHTML = data;
+				})
+				.catch(error => console.error('Error al cargar la navbar:', error));
+		</script>
     
 </body>
 </html>

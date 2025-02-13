@@ -200,7 +200,7 @@ body {
 }
 
 /*CARD*/
-.card {
+.card-samuel {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -214,7 +214,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.card img {
+.card-samuel img {
     max-width: 180px;
     height: 180px;
     object-fit: cover;
@@ -223,18 +223,18 @@ body {
     margin-bottom: 20px;
 }
 
-.card-content {
+.card-samuel-content {
     padding: 10px 20px;
 }
 
-.card h2 {
+.card-samuel h2 {
     font-size: 24px;
     font-weight: bold;
     color: #ffda67; /* Color personalizado del título */
     margin-bottom: 10px;
 }
 
-.card h3 {
+.card-samuel h3 {
     font-size: 18px;
     font-weight: 400;
     color: #ff7c7d; /* Color personalizado del subtítulo */
@@ -242,7 +242,7 @@ body {
     opacity: 0.9;
 }
 
-.card p {
+.card-samuel p {
     font-size: 16px;
     line-height: 1.6;
     color: #d4d4d4; /* Color personalizado del texto */
