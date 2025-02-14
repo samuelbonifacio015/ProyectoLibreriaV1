@@ -3,10 +3,11 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    display: block;  /* Se cambia de flex a block */
+    display: flex;
     background-color: #dfd4d4;
     padding-top: 100px;  /* Ajustar según la altura real de la navbar */
 }
+
 /* Navbar fija en la parte superior */
 .navbar {
     position: fixed;
@@ -18,72 +19,136 @@ body {
     padding: 15px 20px;
     z-index: 1000;
 }
-.btn-primary{
+
+.container{
+    display: flex;
+}
+
+.btn-primary {
     background-color: #5d5df5;
-    padding: 10px 20px;
+    padding: 8px 16px; /* Ajusta el padding para hacer el botón más pequeño */
     color: #fff;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px; /* Hace que el botón sea más redondeado */
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    cursor: pointer;
+    transition: background 0.3s;
+    align-self: center; /* Centra el botón verticalmente */
 }
-.btn-primary:hover{
+
+.btn-primary:hover {
     background: #4a4af5;
 }
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 270px; /* Define un ancho para que sea visible */
+    background-color: #f4f4f4; /* Color de fondo para diferenciarla */
+    padding: 15px; /* Espaciado interno */
+    height: 100vh; /* Que ocupe toda la altura de la pantalla */
+    position: fixed; /* Fija la sidebar en la izquierda */
+    left: 0; /* Asegura que esté pegada al borde izquierdo */
+    top: 0;
+    overflow-y: auto; /* Agrega scroll si el contenido es largo */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Agrega una sombra ligera */
+}
+
+.content {
+    margin-left: 270px; /* Deja espacio suficiente para el contenido principal */
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.filter-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* CARDS */
 .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
-    margin-top: 150px;  /* Aumenta el espacio entre navbar y productos */
+    margin-left: 270px;  /* Ajusta según el ancho del sidebar */
+    padding: 20px;
+    width: calc(100% - 270px); /* Ajusta el ancho del contenido principal */
 }
 
-.card{
+.card {
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 200px;
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    text-align: center; /* Centra el texto */
     cursor: pointer;
     transition: all 0.3s;
 }
+
 .card:hover {
-    transform: scale(1.02);  /* Corregido */
+    transform: scale(1.05);
 }
-.card img{
-    width: 80%;
-    height: 80%;
+
+.card img {
+    width: 100%;
+    height: 150px;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
 }
-.card-footer{
+
+.card-footer {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-}
-.info-block {  /* Corregido */
-    width: 100%;
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: center; /* Centra los elementos */
+    margin-top: 10px; /* Ajusta el margen superior para mayor espacio */
 }
-.title{
-    font-size: 20px;
+
+.info-block {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.title {
+    font-size: 16px;
     font-weight: bold;
 }
-.sub-title{
+
+.sub-title {
+    font-size: 14px;
+    color: gray;
+}
+
+.price {
     font-size: 16px;
     color: gray;
-    font-weight: bold;
-}
-.price{
-    font-size: 18px;
-    color: gray;
+    margin-bottom: 10px; /* Espacio entre el precio y el botón */
 }

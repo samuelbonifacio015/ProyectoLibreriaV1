@@ -7,11 +7,56 @@
     <link rel="stylesheet" href="css/catalogo.css"/>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/navbar.css">
-    
 </head>
 <body>
-    <!--Contenedor donde se cargara la navbar-->
+    <!--Contenedor donde se cargará la navbar-->
     <div id="navbar-container"></div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Oficina</h2>
+
+            <div class="filter-section">
+                <h3>CATEGORÍA</h3>
+                <ul>
+                    <li><a href="#">Útiles (846)</a></li>
+                    <li><a href="#">Artículos de Escritorio (442)</a></li>
+                    <li><a href="#">Muebles de Oficina (20)</a></li>
+                    <li><a href="#">Escritura Fina (126)</a></li>
+                    <li><a href="#">Papelería (36)</a></li>
+                    <li><a href="#">Embalaje, Cintas y Pegamentos (230)</a></li>
+                    <li><a href="#">Accesorios de Oficina (101)</a></li>
+                </ul>
+            </div>
+
+            <div class="filter-section">
+                <h3>PRECIO</h3>
+                <ul>
+                    <li><a href="#">S/0.00 - S/99.99 (1941)</a></li>
+                    <li><a href="#">S/100.00 - S/199.99 (63)</a></li>
+                    <li><a href="#">S/200.00 - S/299.99 (25)</a></li>
+                    <li><a href="#">S/300.00 - S/399.99 (8)</a></li>
+                    <li><a href="#">S/400.00 - S/499.99 (10)</a></li>
+                    <li><a href="#">S/500.00 - S/599.99 (2)</a></li>
+                    <li><a href="#">S/800.00 y superior (1)</a></li>
+                </ul>
+            </div>
+
+            <div class="filter-section">
+                <h3>MARCA</h3>
+                <ul>
+                    <li><a href="#">3M (54)</a></li>
+                    <li><a href="#">ACRIMET (2)</a></li>
+                    <li><a href="#">ALLEANZA (3)</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="content">
+            <h1>Bienvenido a la tienda</h1>
+            <p>Aquí irá el contenido principal...</p>
+        </main>
+    </div>
 
     <div class="cards">
         <div class="card">
@@ -60,8 +105,8 @@
         </div>
         <div class="card">
             <div class="info-block">
-                <span class="title">Audifonos</span>
-                <span class="sub-title">Audifonos 8D</span>
+                <span class="title">Audífonos</span>
+                <span class="sub-title">Audífonos 8D</span>
             </div>
             <img src="img/audifonos.jpg" alt="audifonos">
             <div class="card-footer">
@@ -70,16 +115,16 @@
             </div>
         </div>
     </div>
-   <!-- Script para cargar la navbar -->
-		<script>
-			// Cargar la navbar desde el archivo navbar.html
-			fetch('navbar.html')
-				.then(response => response.text())
-				.then(data => {
-					document.getElementById('navbar-container').innerHTML = data;
-				})
-				.catch(error => console.error('Error al cargar la navbar:', error));
-		</script>
-    
+
+    <!-- Script para cargar la navbar -->
+    <script>
+        // Cargar la navbar desde el archivo navbar.html
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar la navbar:', error));
+    </script>
 </body>
 </html>
