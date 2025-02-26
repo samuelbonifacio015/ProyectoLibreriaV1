@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - JSR Librería</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/sobre-nosotros.css">
+</head>
+<body>
+    <!--Contenedor donde se cargara la navbar-->
+    <div id="navbar-container"></div>
+
+    <section class="sobre-nosotros">
+        <h2>Quiénes Somos</h2>
+        <p>La Librería JSR cuenta con más de 20 años de actividad.</p>
+    
+        <!-- Bloque del Estante -->
+        <div class="contenido">
+            <div class="imagen">
+                <img src="img/estante.jpg" alt="Estante de libros">
+            </div>
+            <div class="texto">
+                <p>En Librería JSR, creemos que cada libro tiene una historia que contar. 
+                    Nuestro objetivo es crear un espacio donde los lectores puedan explorar, 
+                    aprender y disfrutar de una amplia gama de libros cuidadosamente seleccionados.</p>
+                <p>Visítanos para descubrir nuevos títulos, clásicos atemporales y experiencias de lectura inolvidables.</p>
+            </div>
+        </div> 
+    
+        <!-- Bloque del Mostrador -->
+        <div class="contenido contenido-invertido">
+            <div class="imagen">
+                <img src="img/mostrador.jpg" alt="Mostrador">
+            </div>
+            <div class="texto">
+                <p>En nuestro mostrador, siempre encontrarás un equipo dispuesto a ayudarte a descubrir tu próximo libro favorito. Ya sea que busques inspiración, un regalo especial o el último lanzamiento, estamos aquí para ti.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script para cargar la navbar -->
+		<script>
+			// Cargar la navbar desde el archivo navbar.html
+			fetch('navbar.html')
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('navbar-container').innerHTML = data;
+				})
+				.catch(error => console.error('Error al cargar la navbar:', error));
+		</script>
+    
+</body>
+</html>

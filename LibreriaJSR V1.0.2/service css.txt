@@ -1,0 +1,98 @@
+/*-----------------------------------*\
+  #SERVICE
+\*-----------------------------------*/
+
+.service {
+    background: var(--shamrock-green); 
+    position: relative;
+    padding: 60px 0; /* Ajusta el padding superior e inferior */
+    padding-left: 0;  /* Quita el padding izquierdo */
+    padding-right: 0; /* Quita el padding derecho */
+    width: 100vw; /* Hace que la sección ocupe todo el ancho de la ventana */
+    overflow: hidden;
+    color: var(--white);
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0; /* Evita márgenes innecesarios */
+}
+
+.service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    background: var(--shamrock-green);
+    z-index: -1;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+
+.service-item {
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 10px 30px; 
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2); 
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.item-icon {
+    background: var(--white);
+    width: 100px;
+    height: 100px; 
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-icon img {
+    filter: brightness(0) saturate(100%) invert(28%) sepia(99%) saturate(7495%) hue-rotate(152deg) brightness(94%) contrast(101%); /* Color verde original */
+    width: 50px;
+    height: 50px;
+}
+
+.item-content {
+    padding: 15px 0;
+}
+
+.item-title {
+    color: var(--white);
+    font-size: 1.8rem; /* Tamaño aumentado */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.item-discount {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 15px 0;
+    opacity: 0.9;
+}
+
+.item-description {
+    color: var(--white);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}

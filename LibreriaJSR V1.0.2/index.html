@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSR</title>
+
+    <!--custom css link-->
+    <link rel="stylesheet" href="css/styles.css">  
+
+    <!-- Iconos de FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 
+    - #HEADER
+    -->
+    <header class = "navbar">
+        <div class = "logo">
+            <img src="img/JSR.jpg" alt="JSR Librería">
+            <h1>Librería JSR</h1> 
+        </div>          
+        <nav class = "menu">
+            <a href="#categorias"><i class="fa fa-bars"></i> Categorias</a>
+        </nav>
+        <div class="search-bar">
+            <div class="row">
+                <input type="text" placeholder="¿Qué estás buscando?">
+            </div>
+            <button><i class="fa fa-search"></i></button>
+        </div>
+        <div class="results"></div>       
+        <div class="menu">
+            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+            <a href="login.html"><i class="fa fa-user"></i> <span>Inicia sesión</span></a>
+            <a href="sobre-nosotros.html">Sobre Nosotros</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="index.html">Inicio</a>
+        </div>                                         
+    </header>   
+
+    
+    <aside id = "sidebar" class="sidebar">
+
+        <!-- 
+        - #SIDEBAR
+      -->
+        
+        <button id="closeSidebar" class="close-btn">&times;</button>
+        <ul class="sbmenu">
+            <li class="menu-item">Categorias Mas Generales</li>
+            <li class="menu-item">Jugueteria</li>
+            <li class="menu-item">Tecnologia</li>
+            <li class="menu-item">Cuadernos</li>
+            <li class="menu-item">Cosmeticos</li>
+        </ul>
+        <div class = "logo">
+            <img src="img/JSR.jpg" alt="JSR Librería">
+            <h1>Librería JSR</h1> 
+        </div>      
+    </aside>
+
+    <!-- 
+        - #CAROUSEL
+    -->
+    
+    <div class="carousel">
+        <div class="carousel-images">
+
+            <!-- 
+              - #CAROUSEL IMAGES WITH FIGMA
+            -->
+
+            <img src="img/carousel1.png" alt="carousel">
+            <img src="#" alt="img2">
+            <img src="#" alt="img3">
+
+        </div>
+
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn prev">&#10095;</button>
+
+        <div class="carousel-indicators">
+            <span class="indicator-active" data-index = "0"></span>
+            <span class="indicator" data-index="1"></span>
+            <span class="indicator" data-index="2"></span>
+        </div>
+    </div>
+
+    <!-- 
+        - #HERO
+    -->
+    
+    <div class="hero">      
+      <div class="discount">5% de descuento en Útiles Escolares</div>
+        <h2 class="h1 hero-title">
+            Calidad <span class="span">Cantidad</span>
+            Precio & <span class="span">¡Ahorro Seguro!.</span>
+        </h2>
+        <p class="hero-text">Válido para todos los objetos con la categoría "Temporada Escolar"</p>
+        <button class="shop-button">Ir al Catálogo</button>
+    </div>
+
+
+       <!-- 
+        - #SERVICE
+        -->
+        <div class="section service">
+            <div class="container-service">
+
+                <ul class="service-list">
+
+                    <li class="service-item">
+                        <div class="item-icon">
+                            <img src="img/service-icon-1.png" width="60" height="60" alt="Envío">
+                        </div>
+
+                        <div class="item-content">
+                            <h3 class="item-title">Envío Gratis</h3>
+                            <div class="item-discount">UP TO 25% OFF</div>
+                            <p class="item-description">Fresh vegetables package.</p>
+                        </div>
+
+                    </li>
+
+                    <li class="service-item">
+                        <div class="item-icon">
+                            <img src="img/service-icon-2.png" width="60" height="60" alt="Pago">
+                        </div>
+
+                        <div class="item-content">
+                            <h3 class="item-title">Pago Seguro</h3>
+                            <div class="item-discount">UP TO 25% OFF</div>
+                            <p class="item-description">Fresh vegetables package.</p>
+                        </div>
+                        
+                    </li>
+                    
+                    <li class="service-item">
+                        <div class="item-icon">
+                            <img src="img/service-icon-3.png" width="60" height="60" alt="Soporte">
+                        </div>
+
+                        <div class="item-content">
+                            <h3 class="item-title">Soporte 24/7</h3>
+                            <div class="item-discount">UP TO 25% OFF</div>
+                            <p class="item-description">Fresh vegetables package.</p>
+                        </div>
+                        
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>  
+
+
+    <!-- 
+    - #TOP CATEGORIES
+    -->
+
+    <div class="top-categories">
+        <div class="top-categories-container">
+
+            <h2 class="h2 section-title">
+                <span class="span">Top</span> categorias
+            </h2>
+
+            <ul class="has-scrollbar">
+
+                <li class="scrollbar-item">
+                    <div class="category-card">
+
+                        <figure class="card-banner img-holder" style="--width: 330, --height: 300;">
+                            <img src="img/cuaderno.jpg" width="330" height="300" loading="lazy" alt="Cat Food"
+                            class="img-cover">
+                        </figure>
+
+                        <h3 class="h3">
+                            <a href="#" class="card-title">Cuaderno Alpha</a>
+                        </h3>
+                    </div>
+                </li>
+
+                <li class="scrollbar-item">
+                    <div class="category-card">
+
+                        <figure class="card-banner img-holder" style="--width: 330, --height: 300;">
+                            <img src="img/juguete.jpg" width="330" height="300" loading="lazy" alt="Cat Food"
+                            class="img-cover">
+                        </figure>
+
+                        <h3 class="h3">
+                            <a href="#" class="card-title">Juguetes </a>
+                        </h3>
+                    </div>
+                </li>
+
+                <li class="scrollbar-item">
+                    <div class="category-card">
+
+                        <figure class="card-banner img-holder" style="--width: 330, --height: 300;">
+                            <img src="img/audifonos.jpg" width="330" height="300" loading="lazy" alt="Cat Food"
+                            class="img-cover">
+                        </figure>
+
+                        <h3 class="h3">
+                            <a href="#" class="card-title">Colores </a>
+                        </h3>
+                    </div>
+                </li>
+
+                <li class="scrollbar-item">
+                    <div class="category-card">
+
+                        <figure class="card-banner img-holder" style="--width: 330, --height: 300;">
+                            <img src="img/mochila.jpg" width="330" height="300" loading="lazy" alt="Cat Food"
+                            class="img-cover">
+                        </figure>
+
+                        <h3 class="h3">
+                            <a href="#" class="card-title">Mochila </a>
+                        </h3>
+                    </div>
+                </li>
+
+                <li class="scrollbar-item">
+                    <div class="category-card">
+
+                        <figure class="card-banner img-holder" style="--width: 330, --height: 300;">
+                            <img src="img/papel-colores.jpg" width="330" height="300" loading="lazy" alt="Cat Food"
+                            class="img-cover">
+                        </figure>
+
+                        <h3 class="h3">
+                            <a href="#" class="card-title">Papel de Colores </a>
+                        </h3>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- 
+        - #DIVIDER
+    -->
+
+    <div class="custom-divider">
+        <span class="divider-text">Mochilas, Loncheras y Cartucheras</span>
+    </div>
+
+    <!-- 
+        - #CARD
+    -->
+    <div class="card-samuel">
+        <img src="/img/samuel.jpg" alt="Samuel Bonifacio">
+        <div class="cardsamuel-content">
+            <h2>Samuel Bonifacio</h2>
+            <h3>Aprendiendo de Front End</h3>
+            <p>Transformando ideas en realidad con la programación</p>
+        </div>
+    </div>
+    
+        <!-- 
+          - #FOOTER
+        -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column left">
+                    <img src="img/JSR.jpg" alt="JSR logo" class="footer-logo">
+                    <h3>JSR Librerias</h3>
+                    <ul>
+                        <li><strong>EJEMPLO</strong></li>
+                        <li>The all-new TUCSON Hybrid</li>
+                        <li>The all-new TUCSON Hybrid</li>
+                        <li>The all-new TUCSON Hybrid</li>
+                        <li>The all-new TUCSON Hybrid</li>
+                        <li>The all-new TUCSON Hybrid</li>
+                        <li>The all-new TUCSON Hybrid</li>
+                        <li>The all-new TUCSON Hybrid</li>
+                        <li>The all-new TUCSON Hybrid</li>
+                        <li>The all-new TUCSON Hybrid</li>
+                        <li>The all-new TUCSON Hybrid</li>
+                        <li>The all-new TUCSON Hybrid</li>
+                        <li>The all-new TUCSON Hybrid</li>
+                        <li>The all-new TUCSON Hybrid</li>
+                    </ul>
+                </div>
+                <div class="footer-column center">
+                    <h3>Libro de reclamaciones</h3>
+                    <ul>
+                        <li>Ejemplo</li>
+                    </ul>
+                </div>
+                <div class="footer-column right">
+                    <h3>Registro</h3>
+                    <ul>
+                        <li>Contactanos</li>
+                        <li>Sobre Nosotros</li>
+                    </ul>
+                    <h3>Ejemplo</h3>
+                    <ul>
+                        <li>Ejemplo</li>
+                        <li>Ejemplo</li>
+                    </ul>
+                    <p>JSR es una libreria que cuenta con mas de 20 años de existencia, acercate y descubre nuestros productos</p>
+                    <h3>Cotiza aqui</h3>
+                    <h3>Ejemplo</h3>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© Derechos de autor 2025 JSR Libreria, Todos los derechos reservados</p>
+            </div>  
+        </footer>
+
+    </section>
+    
+    <!-- Script para cargar la navbar -->
+    <script>
+        // Cargar la navbar desde el archivo navbar.html
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar la navbar:', error));
+    </script>
+
+    <script src="js/script.js"></script> 
+</body>
+</html>
