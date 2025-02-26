@@ -27,7 +27,7 @@ JSR es una librería web enfocada en ofrecer una experiencia moderna y profesion
 ## 📌 Instalación
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/JSR.git
+   git clone https://github.com/samuelbonifacio015/ProyectoLibreriaV1.git
    ```
 2. Abre el archivo `index.html` en tu navegador favorito.
 
